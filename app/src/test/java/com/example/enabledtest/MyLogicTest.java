@@ -35,7 +35,7 @@ public class MyLogicTest {
 	public void isEnabled() throws Exception {
 		when(preferences.enabled()).thenReturn(enabledPrefField);
 		when(enabledPrefField.get()).thenReturn(enabledOld);
-		doNothing().when(preferences.enabled()).put(anyBoolean());
+		doNothing().when(enabledPrefField).put(anyBoolean());
 
 		logic.init(enabledNew);
 
